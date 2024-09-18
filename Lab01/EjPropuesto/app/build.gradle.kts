@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ejresuelto"
+    namespace = "com.example.ejpropuesto"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.ejresuelto"
+        applicationId = "com.example.ejpropuesto"
         minSdk = 25
         targetSdk = 34
         versionCode = 1
@@ -32,9 +32,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
-    }
-    buildFeatures {
-        viewBinding = true
     }
 }
 

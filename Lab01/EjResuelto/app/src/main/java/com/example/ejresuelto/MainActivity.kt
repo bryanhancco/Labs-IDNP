@@ -3,15 +3,15 @@ package com.example.ejresuelto
 import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.ejresuelto.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,9 +22,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
-        val edtUsername = findViewById<EditText>(R.id.edtUsername)
-        val edtPassword = findViewById<EditText>(R.id.edtPassword)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val btnLogin = binding.btnLogin
+        val edtUsername = binding.edtUsername
+        val edtPassword = binding.edtPassword
 
         btnLogin.setOnClickListener {
             val username = edtUsername.text.toString()
@@ -41,4 +44,3 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
-
