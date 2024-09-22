@@ -11,12 +11,12 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.ejpropuesto.databinding.ActivityMainBinding
 import java.io.File
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
                             "Telefono: $telefono\n" +
                             "Grupo Sanguineo: $grupoSanguineo\n"
                 )
+                Log.e(TAG, "Datos escritos correctamente")
                 Toast.makeText(this, "Datos registrados exitosamente", Toast.LENGTH_SHORT).show()
             } catch (e: Exception) {
                 Toast.makeText(this, "Error al registrar datos", Toast.LENGTH_SHORT).show()
