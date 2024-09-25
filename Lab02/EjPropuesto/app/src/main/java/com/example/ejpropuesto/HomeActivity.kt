@@ -1,6 +1,7 @@
 package com.example.ejpropuesto
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +16,11 @@ class HomeActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        val firstName = intent.getStringExtra("FIRST_NAME")
+        if (firstName != null) {
+            // Usa firstName en la interfaz, por ejemplo:
+            findViewById<TextView>(R.id.welcomeTextView).text = "Bienvenido, $firstName!"
         }
     }
 }
