@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() {
         unregisterReceiver(customBroadcastReceiver)
     }
 
-    // Método para actualizar la UI desde el BroadcastReceiver
     fun updateUI(action: String) {
         when (action) {
             Intent.ACTION_POWER_CONNECTED -> {
@@ -71,5 +70,10 @@ class MainActivity : AppCompatActivity() {
                 textBatStat.text = "Estado de batería: Batería en buen estado"
             }
         }
+    }
+    fun updateBatteryUI(level: Int, health: String, temperature: Int) {
+        findViewById<TextView>(R.id.battery_level).text = "Nivel de batería: $level%"
+        findViewById<TextView>(R.id.battery_health).text = "Salud de batería: $health"
+        findViewById<TextView>(R.id.battery_temperature).text = "Temperatura de batería: $temperature °C"
     }
 }
