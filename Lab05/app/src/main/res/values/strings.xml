@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lab05</string>
+    <string name="catedral_title">Catedral de Arequipa</string>
+    <string name="claustro_title">Claustro de la compañia</string>
+    <string name="catedral_description">Fue construida con ignimbrita (piedra de origen volcánico), y bóvedas de ladrillo; es el santuario principal de la ciudad ocupando todo el lado norte de la Plaza de Armas. Construida totalmente en sillar, exhibe un estilo neorrenacentista con cierta influencia gótica. Su fachada está constituida por setenta columnas con capiteles corintios, tres portadas y dos grandes arcos laterales. Está rematada por dos altas torres renacentistas y estilizadas.</string>
+    <string name="claustro_description">Templo levantado por la orden de los jesuitas para fines religiosos y de vivienda. Representa la arquitectura religiosa del siglo XVII (1660). En sus interiores se pueden apreciar retablos de madera tallados y recubiertos con pan de oro. La estructura actual del templo es de 1650. Posee aproximadamente 66 lienzos de la Escuela Cusqueña. Está ubicado en una esquina de la Plaza de Armas. </string>
+</resources>
